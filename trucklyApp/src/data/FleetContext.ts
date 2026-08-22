@@ -7,6 +7,7 @@ export interface FleetContextValue {
   addTruck: (truck: Omit<Truck, 'id'>) => Truck
   updateTruck: (truckId: string, patch: Partial<TruckEditableFields>) => void
   updateDocument: (truckId: string, kind: DocumentKind, expiresOn: string) => void
+
   clearAllData: () => void
 }
 
