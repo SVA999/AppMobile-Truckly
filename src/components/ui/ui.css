@@ -37,3 +37,59 @@
   padding-top: var(--s-card-pad);
   border-top: 1px solid var(--c-border);
 }
+
+/* Button ----------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-1);
+  height: var(--h-control);
+  padding: 0 var(--s-5);
+  border: 1px solid transparent;
+  border-radius: 0;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.btn--primary {
+  background: var(--c-primary);
+  color: var(--c-primary-ink);
+}
+
+.btn--secondary {
+  background: var(--c-surface);
+  border-color: var(--c-secondary);
+  color: var(--c-secondary);
+}
+
+.btn--ghost {
+  background: transparent;
+  border-color: var(--c-border);
+  color: var(--c-ink-strong);
+}
+
+.btn--danger {
+  background: var(--c-danger);
+  color: var(--c-on-dark);
+}
+
+.btn--sm {
+  height: 36px;
+  padding: 0 var(--s-4);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn:not(:disabled):active {
+  transform: translateY(1px);
+}

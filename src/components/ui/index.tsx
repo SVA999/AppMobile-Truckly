@@ -23,3 +23,38 @@ export function Card({
   )
 }
 
+/* Button ------------------------------------------------------------------ */
+
+type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'danger'
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: ButtonVariant
+  block?: boolean
+  small?: boolean
+}
+
+export function Button({
+  variant = 'primary',
+  block = false,
+  small = false,
+  className = '',
+  children,
+  ...rest
+}: ButtonProps) {
+  const classes = [
+    'btn',
+    `btn--${variant}`,
+    block ? 'btn--block' : '',
+    small ? 'btn--sm' : '',
+    className,
+  ]
+    .filter(Boolean)
+    .join(' ')
+
+  return (
+    <button className={classes} {...rest}>
+      {children}
+    </button>
+  )
+}
+
