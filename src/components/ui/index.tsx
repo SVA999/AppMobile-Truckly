@@ -58,3 +58,47 @@ export function Button({
   )
 }
 
+/* Badge ------------------------------------------------------------------- */
+
+/** Badge de estado del camión: sólido / contorno / apagado según el diseño. */
+export function StatusBadge({ status }: { status: TruckStatus }) {
+  const variant =
+    status === 'operativo' ? 'solid' : status === 'mantenimiento' ? 'outline' : 'muted'
+  return (
+    <span className={`badge badge--${variant}`}>
+      <span className="badge__dot" />
+      {STATUS_LABELS[status]}
+    </span>
+  )
+}
+
+export function Badge({
+  children,
+  variant = 'solid',
+}: {
+  children: ReactNode
+  variant?: 'solid' | 'outline' | 'muted'
+}) {
+  return <span className={`badge badge--${variant}`}>{children}</span>
+}
+
+/* Chip -------------------------------------------------------------------- */
+
+export function Chip({
+  active = false,
+  caret = false,
+  children,
+  ...rest
+}: { active?: boolean; caret?: boolean } & ButtonHTMLAttributes<HTMLButtonElement>) {
+  return (
+    <button
+      type="button"
+      className={active ? 'chip is-active' : 'chip'}
+      aria-pressed={active}
+      {...rest}
+    >
+      {children}
+      {caret && <Icon name="chevron-down" size={4} />}
+    </button>
+  )
+}

@@ -93,3 +93,73 @@
 .btn:not(:disabled):active {
   transform: translateY(1px);
 }
+
+/* Badge de estado -------------------------------------------------------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-1);
+  padding: 2px var(--s-2);
+  font-size: 10px;
+  line-height: 15px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.badge__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--r-pill);
+  background: currentColor;
+}
+
+.badge--solid {
+  background: var(--c-primary);
+  color: var(--c-primary-ink);
+}
+
+.badge--outline {
+  padding: var(--s-1) 10px;
+  background: var(--c-surface);
+  border: 2px solid var(--c-accent);
+  color: var(--c-secondary);
+}
+
+.badge--muted {
+  background: var(--c-fill-muted);
+  color: var(--c-ink-muted);
+}
+
+/* Chip / filtro ---------------------------------------------------------- */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-1);
+  height: var(--h-chip);
+  padding: 0 9px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-pill);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  color: var(--c-ink-strong);
+  white-space: nowrap;
+}
+
+.chip.is-active {
+  border-color: var(--c-primary);
+  color: var(--c-primary);
+}
+
+.chip-row {
+  display: flex;
+  gap: var(--s-1);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.chip-row::-webkit-scrollbar {
+  display: none;
+}
