@@ -1,0 +1,179 @@
+.dash {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+}
+
+/* Tarjetas de métrica ------------------------------------------------------ */
+
+.dash__statHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-2);
+  color: var(--c-ink);
+}
+
+.dash__statLabel {
+  text-transform: uppercase;
+}
+
+.dash__statLabel--strong {
+  color: var(--c-ink);
+}
+
+.dash__statValue {
+  margin: var(--s-2) 0 var(--s-1);
+  font-size: 44px;
+  line-height: 52px;
+  font-weight: 700;
+  color: var(--c-ink);
+  letter-spacing: -1px;
+}
+
+.dash__statTotal {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--c-ink-muted);
+  letter-spacing: 0;
+}
+
+/* Secciones ---------------------------------------------------------------- */
+
+.dash__section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  margin-top: var(--s-2);
+}
+
+.dash__sectionHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--s-3);
+}
+
+.dash__sectionHead--search {
+  align-items: center;
+}
+
+.dash__seeAll {
+  flex: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid var(--c-secondary);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  color: var(--c-secondary);
+}
+
+.dash__search {
+  flex: 1 1 190px;
+  min-width: 0;
+  max-width: 210px;
+}
+
+.dash__search .search__input {
+  height: 40px;
+  border-radius: var(--r-pill);
+  font-size: 14px;
+}
+
+/* Tabla de alertas --------------------------------------------------------- */
+
+.dash__table {
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-card);
+  overflow: hidden;
+  background: var(--c-surface);
+}
+
+.dash__tableHead,
+.dash__tableRow {
+  display: grid;
+  grid-template-columns: 78px 1fr 96px;
+  gap: var(--s-2);
+  padding: var(--s-3) var(--s-4);
+  align-items: center;
+}
+
+.dash__tableHead {
+  background: var(--c-fill-muted);
+  text-transform: uppercase;
+}
+
+.dash__tableRow {
+  border-top: 1px solid var(--c-border);
+}
+
+.dash__plate {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: var(--c-ink);
+}
+
+.dash__empty {
+  padding: var(--s-4);
+}
+
+/* Resumen de flota --------------------------------------------------------- */
+
+.dash__activity {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.dash__actCard {
+  cursor: pointer;
+}
+
+.dash__actCard:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 2px;
+}
+
+.dash__actHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--s-3) var(--s-4);
+  background: var(--c-fill-muted);
+}
+
+.dash__actPlate {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--c-ink);
+}
+
+.dash__actBody {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: var(--s-3) var(--s-4);
+}
+
+.dash__actRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-2);
+}
+
+.dash__actRow .t-label {
+  text-transform: uppercase;
+}
+
+.dash__actValue {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: var(--c-ink);
+}
+
