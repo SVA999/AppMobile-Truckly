@@ -102,3 +102,70 @@ export function Chip({
     </button>
   )
 }
+
+/* Campos ------------------------------------------------------------------ */
+
+interface FieldProps extends InputHTMLAttributes<HTMLInputElement> {
+  label: string
+  error?: string
+}
+
+export function Field({ label, error, id, ...rest }: FieldProps) {
+  const inputId = id ?? `f-${label.replace(/\W+/g, '-').toLowerCase()}`
+  return (
+    <div className="field">
+      <label className="field__label" htmlFor={inputId}>
+        {label}
+      </label>
+      <input
+        id={inputId}
+        className="field__control"
+        aria-invalid={error ? true : undefined}
+        {...rest}
+      />
+      {error ? <span className="field__error">{error}</span> : null}
+    </div>
+  )
+}
+
+interface SelectFieldProps extends SelectHTMLAttributes<HTMLSelectElement> {
+  label: string
+  error?: string
+  children: ReactNode
+}
+
+export function SelectField({ label, error, id, children, ...rest }: SelectFieldProps) {
+  const selectId = id ?? `s-${label.replace(/\W+/g, '-').toLowerCase()}`
+  return (
+    <div className="field">
+      <label className="field__label" htmlFor={selectId}>
+        {label}
+      </label>
+      <div className="field__select-wrap">
+        <select
+          id={selectId}
+          className="field__control"
+          aria-invalid={error ? true : undefined}
+          {...rest}
+        >
+          {children}
+        </select>
+        <span className="field__select-caret">
+          <Icon name="caret-down" size={5} />
+        </span>
+      </div>
+      {error ? <span className="field__error">{error}</span> : null}
+    </div>
+  )
+}
+
+export function SearchInput(props: InputHTMLAttributes<HTMLInputElement>) {
+  return (
+    <div className="search">
+      <span className="search__icon">
+        <Icon name="search" size={18} />
+      </span>
+      <input type="search" className="search__input" {...props} />
+    </div>
+  )
+}
