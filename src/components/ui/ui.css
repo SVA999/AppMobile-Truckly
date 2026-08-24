@@ -225,3 +225,31 @@
   color: var(--c-danger);
 }
 
+/* Buscador --------------------------------------------------------------- */
+.search {
+  position: relative;
+  display: flex;
+}
+
+.search__icon {
+  position: absolute;
+  top: 50%;
+  left: var(--s-3);
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--c-ink-muted);
+}
+
+.search__input {
+  width: 100%;
+  height: var(--h-control);
+  padding: 0 var(--s-card-pad) 0 41px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: 0;
+  font-size: 16px;
+}
+
+.search__input::placeholder {
+  color: var(--c-ink-muted);
+}
