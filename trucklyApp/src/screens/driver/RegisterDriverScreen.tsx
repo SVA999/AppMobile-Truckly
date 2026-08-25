@@ -8,7 +8,13 @@ import '../register/RegisterTruckScreen.css'
 
 const LICENSE_CATEGORIES = ['A1', 'A2', 'B1', 'B2', 'B3', 'C1', 'C2', 'C3'] as const
 
-
+interface FormState {
+  name: string
+  license: string
+  category: string
+  phone: string
+  truckId: string
+}
 
 const EMPTY: FormState = {
   name: '',
