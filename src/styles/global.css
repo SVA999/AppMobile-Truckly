@@ -1,0 +1,101 @@
+@import './tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--c-bg);
+  color: var(--c-ink-strong);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+p,
+figure {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Tipografías del diseño ------------------------------------------------- */
+
+.t-title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: var(--c-ink);
+}
+
+.t-body {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.t-label {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  color: var(--c-ink-muted);
+}
+
+.t-meta {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--c-ink-muted);
+}
+
+.t-micro {
+  font-size: 10px;
+  line-height: 15px;
+}
+
+.t-muted {
+  color: var(--c-ink-muted);
+}
+
+.t-danger {
+  color: var(--c-danger);
+}
+
+/* Utilidad para ocultar visualmente sin perder accesibilidad */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
