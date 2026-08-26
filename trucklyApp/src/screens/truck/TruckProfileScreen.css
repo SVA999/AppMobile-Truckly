@@ -1,0 +1,277 @@
+.truck {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+}
+
+/* Hero --------------------------------------------------------------------- */
+
+/* El diseño usa una foto del camión; sin red se muestra un panel neutro con la
+   placa, que es el elemento informativo del hero. */
+.truck__hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 176px;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      var(--c-fill-subtle) 0 12px,
+      var(--c-fill-muted) 12px 24px
+    );
+}
+
+.truck__plate {
+  padding: var(--s-2) var(--s-4);
+  background: var(--c-secondary);
+  color: var(--c-secondary-ink);
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.truck__heroBody {
+  padding: var(--s-card-pad);
+}
+
+.truck__statusRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+}
+
+.truck__statusLabel {
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.truck__statusPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: var(--s-1) var(--s-3);
+  border: 1px solid currentColor;
+  border-radius: var(--r-round);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.truck__statusPill--operativo {
+  color: var(--c-primary);
+}
+
+.truck__statusPill--mantenimiento {
+  color: var(--c-secondary);
+  border-color: var(--c-accent);
+}
+
+.truck__statusPill--inactivo {
+  color: var(--c-ink-muted);
+}
+
+.truck__statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--r-pill);
+  background: currentColor;
+}
+
+.truck__miniGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s-3);
+  margin-top: var(--s-4);
+}
+
+.truck__mini {
+  padding: var(--s-3);
+  background: var(--c-bg);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-card);
+}
+
+.truck__miniValue {
+  margin: 6px 0 2px;
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 700;
+  color: var(--c-ink);
+}
+
+.truck__miniValue--sm {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+/* Secciones ---------------------------------------------------------------- */
+
+.truck__sectionHead {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  color: var(--c-ink);
+}
+
+.truck__sectionHead--split {
+  justify-content: space-between;
+}
+
+.truck__sectionTitle {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: var(--c-ink);
+}
+
+.truck__updateLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--c-ink-strong);
+}
+
+/* Información básica ------------------------------------------------------- */
+
+.truck__specs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  margin: var(--s-4) 0 0;
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--c-border);
+}
+
+.truck__specValue {
+  margin: 2px 0 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--c-ink);
+}
+
+/* Edición ------------------------------------------------------------------ */
+
+.truck__editForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+  margin-top: var(--s-4);
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--c-border);
+}
+
+.truck__editActions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s-3);
+  margin-top: var(--s-1);
+}
+
+/* Control documental ------------------------------------------------------- */
+
+.truck__docs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  margin: var(--s-4) 0 0;
+  padding: var(--s-4) 0 0;
+  border-top: 1px solid var(--c-border);
+  list-style: none;
+}
+
+.truck__doc {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  padding: var(--s-3);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-card);
+  color: var(--c-ink);
+}
+
+.truck__docIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex: none;
+  background: var(--c-fill-subtle);
+  border-radius: var(--r-card);
+}
+
+.truck__docText {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.truck__docName {
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 700;
+  color: var(--c-ink);
+}
+
+.truck__docAlert {
+  display: inline-flex;
+  color: var(--c-danger);
+}
+
+.truck__docsBtn {
+  margin-top: var(--s-4);
+}
+
+/* Conductor ---------------------------------------------------------------- */
+
+.truck__driverBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-1);
+  margin: var(--s-4) 0;
+  padding: var(--s-5) var(--s-4);
+  border: 1px dashed var(--c-border-strong);
+  border-radius: var(--r-card);
+}
+
+.truck__driverAvatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  margin-bottom: var(--s-2);
+  background: var(--c-fill-muted);
+  border: 1px solid var(--c-border-strong);
+  border-radius: var(--r-card);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--c-ink-muted);
+}
+
+.truck__driverName {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--c-ink);
+}
+
+.truck__contact {
+  margin-top: var(--s-3);
+}
+
+.truck__noDriver {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  margin-top: var(--s-4);
+}

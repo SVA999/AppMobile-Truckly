@@ -1,0 +1,36 @@
+.register__head {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  margin-bottom: var(--s-4);
+}
+
+.register__back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex: none;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-card);
+  color: var(--c-ink);
+}
+
+.register__cardTitle {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: var(--c-ink);
+}
+
+.register__fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+}
+
+.register__docs {
+  margin-top: var(--s-4);
+}

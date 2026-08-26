@@ -1,0 +1,151 @@
+.docs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+}
+
+.docs__head {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Tarjetas por camión -------------------------------------------------------- */
+
+.docs__groups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+}
+
+.docs__truckCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.docs__truckCard--danger {
+  border-color: var(--c-danger);
+  background: var(--c-danger-bg);
+}
+
+.docs__truckHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--s-3);
+  padding-bottom: var(--s-3);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.docs__truckPlate {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--c-secondary);
+}
+
+.docs__docList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.docs__doc {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  padding: var(--s-3);
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-card);
+}
+
+.docs__doc--danger {
+  border-color: var(--c-danger);
+}
+
+.docs__docHead {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+}
+
+.docs__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex: none;
+  background: var(--c-fill-subtle);
+  border-radius: var(--r-card);
+  color: var(--c-ink-strong);
+}
+
+.docs__docName {
+  flex: 1;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 700;
+  color: var(--c-ink);
+}
+
+.docs__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-2);
+}
+
+.docs__value {
+  margin: 0;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 700;
+  color: var(--c-ink);
+  text-align: right;
+}
+
+/* Edición ------------------------------------------------------------------ */
+
+.docs__edit {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--c-border);
+}
+
+.docs__editLabel {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--c-ink-strong);
+}
+
+.docs__dateInput {
+  height: var(--h-control);
+  padding: 0 var(--s-3);
+  background: var(--c-bg);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-card);
+  font-size: 18px;
+  color: var(--c-ink);
+}
+
+.docs__actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s-3);
+  margin-top: var(--s-1);
+}
+
+.docs__footer {
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--c-border);
+}
+
+.docs__footer .btn {
+  min-width: 160px;
+}
