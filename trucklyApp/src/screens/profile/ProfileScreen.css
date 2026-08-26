@@ -1,0 +1,94 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+}
+
+.profile__owner {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+}
+
+.profile__avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  flex: none;
+  background: var(--c-secondary);
+  color: var(--c-secondary-ink);
+  border-radius: var(--r-round);
+}
+
+.profile__name {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--c-ink);
+}
+
+.profile__options {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__option {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  padding: var(--s-4);
+}
+
+.profile__option + .profile__option {
+  border-top: 1px solid var(--c-border);
+}
+
+.profile__optionIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex: none;
+  background: var(--c-fill-subtle);
+  border-radius: var(--r-card);
+  color: var(--c-secondary);
+}
+
+.profile__optionText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.profile__optionLabel {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--c-ink);
+}
+
+.profile__resetHint {
+  margin-bottom: var(--s-3);
+}
+
+.profile__confirm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--c-border);
+}
+
+.profile__confirmText {
+  color: var(--c-danger);
+  font-weight: 600;
+}
+
+.profile__confirmActions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s-3);
+}
