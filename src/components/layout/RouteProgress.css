@@ -1,0 +1,35 @@
+.route-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--c-primary) 35%,
+    var(--c-primary) 65%,
+    transparent
+  );
+  background-size: 220% 100%;
+  animation: route-progress-sweep 0.32s ease-out;
+}
+
+@keyframes route-progress-sweep {
+  from {
+    background-position: 220% 0;
+    opacity: 1;
+  }
+  to {
+    background-position: -40% 0;
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .route-progress {
+    animation: none;
+    opacity: 0;
+  }
+}

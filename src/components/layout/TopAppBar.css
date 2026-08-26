@@ -1,0 +1,56 @@
+.appbar {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--h-appbar);
+  padding: 0 var(--s-4);
+  background: var(--c-secondary);
+  color: var(--c-secondary-ink);
+}
+
+.appbar__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--s-1);
+  color: var(--c-secondary-ink);
+}
+
+.appbar__logo {
+  display: flex;
+  align-items: center;
+  flex: none;
+  color: var(--c-primary);
+}
+
+.appbar__word {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: var(--c-secondary-ink);
+}
+
+.appbar__back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-right: var(--s-1);
+  padding: 0;
+  background: none;
+  border: none;
+  color: var(--c-secondary-ink);
+}
+
+.appbar__bell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--s-2);
+  background: none;
+  border: none;
+  color: var(--c-secondary-ink);
+}
