@@ -6,3 +6,4 @@ export function useFleet(): FleetContextValue {
   if (!ctx) throw new Error('useFleet debe usarse dentro de <FleetProvider>')
   return ctx
 }
+
