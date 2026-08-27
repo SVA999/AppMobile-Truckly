@@ -1,13 +1,5 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-<<<<<<< HEAD
-import './styles/global.css'
-import App from './App.tsx'
-
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-=======
 import { HashRouter } from 'react-router-dom'
 
 // Fuente empaquetada localmente: la app no descarga nada en tiempo de ejecución.
@@ -28,6 +20,5 @@ createRoot(document.getElementById('root')!).render(
         <App />
       </FleetProvider>
     </HashRouter>
->>>>>>> origin/dev2
   </StrictMode>,
 )
