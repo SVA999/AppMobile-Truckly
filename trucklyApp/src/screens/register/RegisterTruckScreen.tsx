@@ -6,7 +6,7 @@ import { Button, Card, Field, SelectField } from '../../components/ui'
 import { useFleet } from '../../data/useFleet'
 import { isPastDate, todayISO } from '../../data/dates'
 import { BODY_TYPES, type BodyType, type DocumentKind } from '../../data/types'
-import './RegisterTruckScreen.css'
+import './RegisterTruckScreen.scss'
 
 interface FormState {
   plate: string

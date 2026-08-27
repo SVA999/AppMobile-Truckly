@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { Icon, type IconName } from '../icons/Icon'
-import './BottomNav.css'
+import './BottomNav.scss'
 
 interface NavItem {
   to: string

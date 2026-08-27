@@ -6,7 +6,7 @@ import { Card, Chip, SearchInput, StatusBadge } from '../../components/ui'
 import { useFleet } from '../../data/useFleet'
 import { documentState, formatDayMonth } from '../../data/dates'
 import { DOCUMENT_LABELS, type BodyType, type Truck, type TruckStatus } from '../../data/types'
-import './FleetListScreen.css'
+import './FleetListScreen.scss'
 
 type StatusFilter = 'todos' | TruckStatus
 type TypeFilter = 'todos' | BodyType

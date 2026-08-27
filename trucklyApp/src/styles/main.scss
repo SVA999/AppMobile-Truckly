@@ -1,0 +1,4 @@
+// Punto de entrada de estilos globales.
+// Reúne los parciales SASS (archivos con prefijo `_`, no se compilan sueltos).
+@use './tokens';
+@use './global';

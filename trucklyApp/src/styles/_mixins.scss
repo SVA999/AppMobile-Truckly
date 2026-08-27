@@ -1,0 +1,16 @@
+// Mixins compartidos por las primitivas de UI (`components/ui/ui.scss`).
+
+// Superficie de tarjeta: fondo, borde 1px, radio y padding del diseño.
+@mixin surface($pad: var(--s-card-pad)) {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-card);
+  padding: $pad;
+}
+
+// Fila de control centrada (botones, chips).
+@mixin control-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,83 @@
+// Parcial de tokens de marca Truckly.
+//
+// Los colores base vienen del manual de marca; las variantes muted/subtle/strong
+// son tintes derivados para legibilidad. Las escalas numéricas (espaciado,
+// alturas, radios) se definen como mapas SASS —fuente única de verdad— y se
+// emiten como custom properties CSS con `@each` para poder usarlas en runtime.
+
+// Escalas del diseño ---------------------------------------------------------
+
+$spacing: (
+  1: 4px,
+  2: 8px,
+  3: 12px,
+  4: 16px,
+  5: 24px,
+);
+
+$heights: (
+  appbar: 56px,
+  bottomnav: 64px,
+  control: 44px,
+  chip: 32px,
+);
+
+$radii: (
+  card: 4px,
+  pill: 12px,
+  round: 999px,
+);
+
+// Custom properties --------------------------------------------------------
+
+:root {
+  /* Marca */
+  --c-primary: #f98513; /* Habañero: CTA, estados activos, iconos clave */
+  --c-primary-ink: #ffffff;
+  --c-secondary: #223382; /* Deep Space Royal: navbars, títulos, marca */
+  --c-secondary-ink: #ffffff;
+  --c-accent: #9bacd8; /* Aster Flower Blue: bordes, hover, seleccionado, tags */
+
+  /* Superficies */
+  --c-bg: #f4f1ec; /* Luster White */
+  --c-surface: #ffffff;
+  --c-fill-muted: #dad1c8; /* Jodhpur Tan */
+  --c-fill-subtle: #ece6de; /* Jodhpur Tan aclarado, para iconos sobre tarjeta */
+
+  /* Texto */
+  --c-ink: #111144; /* Deadly Depths */
+  --c-ink-strong: #111144;
+  --c-ink-muted: #5b5e82; /* Deadly Depths aclarado */
+  --c-ink-placeholder: #8c8fab;
+  --c-on-dark: #ffffff;
+
+  /* Bordes */
+  --c-border: #dad1c8;
+  --c-border-strong: #c3b6a5;
+
+  /* Estado */
+  --c-danger: #ba1a1a;
+  --c-danger-bg: #fbeaea;
+
+  /* Espaciado — escala 4 / 8 / 16 / 24 generada desde $spacing */
+  @each $step, $value in $spacing {
+    --s-#{$step}: #{$value};
+  }
+  --s-card-pad: 17px; /* padding exacto de tarjeta del diseño, fuera de escala */
+
+  /* Alturas fijas del diseño — generadas desde $heights */
+  @each $name, $value in $heights {
+    --h-#{$name}: #{$value};
+  }
+
+  /* Radios — generados desde $radii */
+  @each $name, $value in $radii {
+    --r-#{$name}: #{$value};
+  }
+
+  /* Tipografía */
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Ancho del artboard de Figma */
+  --w-frame: 390px;
+}

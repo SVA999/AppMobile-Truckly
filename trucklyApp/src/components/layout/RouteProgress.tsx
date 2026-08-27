@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import './RouteProgress.css'
+import './RouteProgress.scss'
 
 /** Barra de progreso breve al cambiar de pantalla: feedback de navegación
  *  instantáneo aunque la app no tenga carga de red real. */

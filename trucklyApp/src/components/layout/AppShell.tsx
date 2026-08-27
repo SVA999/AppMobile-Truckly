@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom'
 import { BottomNav } from './BottomNav'
 import { TopAppBar } from './TopAppBar'
 import { RouteProgress } from './RouteProgress'
-import './AppShell.css'
+import './AppShell.scss'
 
 interface AppShellProps {
   children: ReactNode

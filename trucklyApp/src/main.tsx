@@ -8,7 +8,7 @@ import '@fontsource/inter/400-italic.css'
 import '@fontsource/inter/600.css'
 import '@fontsource/inter/700.css'
 
-import './styles/global.css'
+import './styles/main.scss'
 import App from './App'
 import { FleetProvider } from './data/FleetProvider'
 

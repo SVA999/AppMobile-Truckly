@@ -14,7 +14,7 @@ import {
   type Truck,
   type TruckStatus,
 } from '../../data/types'
-import './TruckProfileScreen.css'
+import './TruckProfileScreen.scss'
 
 const DOC_ICONS: Record<DocumentKind, IconName> = {
   soat: 'shield-lg',
@@ -67,6 +67,7 @@ export function TruckProfileScreen() {
     truck ? draftFrom(truck) : draftFrom({} as Truck),
   )
   const [errors, setErrors] = useState<Partial<Record<keyof EditForm, string>>>({})
+  const [unlinking, setUnlinking] = useState(false)
 
   if (!truck) return <Navigate to="/flota" replace />
 
@@ -77,6 +78,15 @@ export function TruckProfileScreen() {
     setForm(draftFrom(truck!))
     setErrors({})
     setEditing(true)
+  }
+
+  function handleUnlinkDriver() {
+    updateTruck(truck!.id, {
+      driverName: null,
+      driverLicense: null,
+      driverPhone: null,
+    })
+    setUnlinking(false)
   }
 
   function validate(): boolean {
@@ -326,6 +336,41 @@ export function TruckProfileScreen() {
                 >
                   Llamar al conductor
                 </a>
+              )}
+
+              {unlinking ? (
+                <div className="truck__unlinkConfirm">
+                  <p className="t-body truck__unlinkText">
+                    ¿Desvincular a {truck.driverName} de este camión?
+                  </p>
+                  <div className="truck__unlinkActions">
+                    <Button
+                      type="button"
+                      variant="secondary"
+                      onClick={() => setUnlinking(false)}
+                    >
+                      Cancelar
+                    </Button>
+                    <Button
+                      type="button"
+                      variant="danger"
+                      onClick={handleUnlinkDriver}
+                    >
+                      Desvincular
+                    </Button>
+                  </div>
+                </div>
+              ) : (
+                <Button
+                  type="button"
+                  variant="ghost"
+                  block
+                  className="truck__unlink"
+                  onClick={() => setUnlinking(true)}
+                >
+                  <Icon name="user" size={12} />
+                  Desvincular conductor
+                </Button>
               )}
             </>
           ) : (

@@ -6,7 +6,7 @@ import { Badge, Button, Card } from '../../components/ui'
 import { useFleet } from '../../data/useFleet'
 import { documentState, formatSlashDate, todayISO } from '../../data/dates'
 import { DOCUMENT_LABELS, type DocumentKind, type Truck } from '../../data/types'
-import './UpdateDocumentsScreen.css'
+import './UpdateDocumentsScreen.scss'
 
 const DOC_ICONS: Record<DocumentKind, IconName> = {
   soat: 'shield',

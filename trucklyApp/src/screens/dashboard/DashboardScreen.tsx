@@ -6,7 +6,7 @@ import { useFleet } from '../../data/useFleet'
 import { documentState, formatLongDate } from '../../data/dates'
 import { DOCUMENT_LABELS } from '../../data/types'
 import { useMemo, useState } from 'react'
-import './DashboardScreen.css'
+import './DashboardScreen.scss'
 
 export function DashboardScreen() {
   const { trucks } = useFleet()

@@ -7,7 +7,7 @@ import type {
 import { Icon } from '../icons/Icon'
 import type { TruckStatus } from '../../data/types'
 import { STATUS_LABELS } from '../../data/types'
-import './ui.css'
+import './ui.scss'
 
 /* Card -------------------------------------------------------------------- */
 

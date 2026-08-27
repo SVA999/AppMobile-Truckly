@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { Icon } from '../icons/Icon'
-import './TopAppBar.css'
+import './TopAppBar.scss'
 
 interface TopAppBarProps {
   showBack?: boolean

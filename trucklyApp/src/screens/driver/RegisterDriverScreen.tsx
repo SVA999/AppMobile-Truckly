@@ -4,7 +4,7 @@ import { AppShell } from '../../components/layout/AppShell'
 import { Icon } from '../../components/icons/Icon'
 import { Button, Card, Field, SelectField } from '../../components/ui'
 import { useFleet } from '../../data/useFleet'
-import '../register/RegisterTruckScreen.css'
+import '../register/RegisterTruckScreen.scss'
 
 const LICENSE_CATEGORIES = ['A1', 'A2', 'B1', 'B2', 'B3', 'C1', 'C2', 'C3'] as const
 

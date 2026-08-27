@@ -2,12 +2,11 @@
    tarjetas 1px #e2e2e2 radio 4 padding 17, botón alto 44,
    chip alto 32 radio 12, badge px8/py2 texto 10 mayúsculas. */
 
+@use '../../styles/mixins' as *;
+
 /* Card ------------------------------------------------------------------- */
 .card {
-  background: var(--c-surface);
-  border: 1px solid var(--c-border);
-  border-radius: var(--r-card);
-  padding: var(--s-card-pad);
+  @include surface;
 }
 
 .card--flush {
@@ -40,9 +39,7 @@
 
 /* Button ----------------------------------------------------------------- */
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  @include control-row;
   gap: var(--s-1);
   height: var(--h-control);
   padding: 0 var(--s-5);
@@ -52,46 +49,46 @@
   line-height: 16px;
   font-weight: 600;
   letter-spacing: 0.6px;
-}
 
-.btn--block {
-  width: 100%;
-}
+  &--block {
+    width: 100%;
+  }
 
-.btn--primary {
-  background: var(--c-primary);
-  color: var(--c-primary-ink);
-}
+  &--primary {
+    background: var(--c-primary);
+    color: var(--c-primary-ink);
+  }
 
-.btn--secondary {
-  background: var(--c-surface);
-  border-color: var(--c-secondary);
-  color: var(--c-secondary);
-}
+  &--secondary {
+    background: var(--c-surface);
+    border-color: var(--c-secondary);
+    color: var(--c-secondary);
+  }
 
-.btn--ghost {
-  background: transparent;
-  border-color: var(--c-border);
-  color: var(--c-ink-strong);
-}
+  &--ghost {
+    background: transparent;
+    border-color: var(--c-border);
+    color: var(--c-ink-strong);
+  }
 
-.btn--danger {
-  background: var(--c-danger);
-  color: var(--c-on-dark);
-}
+  &--danger {
+    background: var(--c-danger);
+    color: var(--c-on-dark);
+  }
 
-.btn--sm {
-  height: 36px;
-  padding: 0 var(--s-4);
-}
+  &--sm {
+    height: 36px;
+    padding: 0 var(--s-4);
+  }
 
-.btn:disabled {
-  opacity: 0.45;
-  cursor: not-allowed;
-}
+  &:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
 
-.btn:not(:disabled):active {
-  transform: translateY(1px);
+  &:not(:disabled):active {
+    transform: translateY(1px);
+  }
 }
 
 /* Badge de estado -------------------------------------------------------- */

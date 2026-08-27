@@ -3,7 +3,7 @@ import { Icon, type IconName } from '../../components/icons/Icon'
 import { AppShell } from '../../components/layout/AppShell'
 import { Button, Card } from '../../components/ui'
 import { useFleet } from '../../data/useFleet'
-import './ProfileScreen.css'
+import './ProfileScreen.scss'
 
 interface ProfileOption {
   icon: IconName
