@@ -1,102 +1,51 @@
-# Truckly — App Híbrida de Gestión de Flota
+# Términos y Condiciones de Uso
+**Aplicación Móvil Android:** Truckly  
+**Última actualización:** 3 de septiembre de 2026
 
-Implementación en **React + Vite + TypeScript** de las pantallas del flujo del
-dueño del archivo de Figma
-[`Truckly`](https://www.figma.com/design/9ubJPOlPzAKEJSwMpRlt6H/kalvo).
+> **Aviso Importante:** Al descargar, instalar o utilizar la aplicación **Truckly**, el usuario acepta de manera expresa y sin reservas los presentes Términos y Condiciones. Si no está de acuerdo con alguna de las disposiciones aquí establecidas, deberá abstenerse de utilizar la aplicación.
 
-La app **no requiere conexión a internet**: no hace ninguna llamada de red, la
-tipografía y los iconos van empaquetados en el bundle y los datos viven en
-`localStorage`.
+---
 
-## Estructura del repositorio
+## 1. Descripción del Servicio
+**Truckly** es una aplicación móvil diseñada para facilitar la gestión, seguimiento, logística e intermediación de servicios de transporte de carga y fletes. La aplicación conecta a usuarios del servicio de transporte (clientes/remitentes) con conductores o empresas de transporte de carga (transportistas).
 
-El código de la aplicación está en la carpeta **`trucklyApp/`**:
+## 2. Registro de Usuario y Cuentas
+* **Requisitos de edad:** Para utilizar Truckly, el usuario debe tener al menos 18 años de edad y capacidad legal para celebrar contratos vinculantes.
+* **Veracidad de los datos:** El usuario se compromete a proporcionar información veraz, precisa, actualizada y completa durante el proceso de registro y uso de la aplicación.
+* **Seguridad de la cuenta:** El usuario es el único responsable de mantener la confidencialidad de sus credenciales de acceso (usuario y contraseña) y de todas las actividades que ocurran bajo su cuenta.
 
-```
-trucklyApp/
-├── index.html
-├── vite.config.ts            base './' + plugin de React
-├── package.json
-└── src/
-    ├── main.tsx              Punto de entrada: fuentes, router, provider
-    ├── App.tsx               Tabla de rutas
-    ├── styles/               SASS: parciales + entrada global
-    │   ├── _tokens.scss      Mapas SASS de escalas -> custom properties (@each)
-    │   ├── _global.scss      Reset + escalas tipográficas
-    │   ├── _mixins.scss      Mixins compartidos (surface, control-row)
-    │   └── main.scss         Entrada: @use de los parciales (la importa main.tsx)
-    ├── components/
-    │   ├── icons/            Vectores (paths.ts) + Icon.tsx
-    │   ├── layout/           AppShell, TopAppBar, BottomNav, RouteProgress
-    │   └── ui/               Card, Button, Badge, Chip, Field, SearchInput
-    ├── data/                 Modelo de dominio + estado de la flota (localStorage)
-    └── screens/              Una carpeta por pantalla (.tsx + .scss)
-```
+## 3. Licencia de Uso
+Se concede al usuario una licencia limitada, no exclusiva, no transferible, revocable y de alcance personal para descargar, instalar y utilizar la aplicación **Truckly** en dispositivos Android compatibles de su propiedad o bajo su control, únicamente con fines personales o de gestión comercial legítima.
 
-Los estilos usan **SASS** (`sass` como dependencia de desarrollo; Vite lo compila
-sin configuración extra). `styles/` contiene los **parciales** (`_tokens.scss`,
-`_global.scss`, `_mixins.scss`) que `main.scss` reúne con `@use`; cada pantalla y
-componente tiene su propio `.scss`.
+## 4. Uso Aceptable y Restricciones
+El usuario se compromete a utilizar la aplicación de conformidad con la ley, la moral y el orden público. Queda expresamente prohibido:
 
-## Ejecución
+* Utilizar la aplicación para transportar bienes ilícitos, peligrosos no declarados o prohibidos por la legislación aplicable.
+* Ingresar datos falsos, engañosos o realizar reservas/solicitudes fraudulentas.
+* Intentar descompilar, realizar ingeniería inversa o modificar el código fuente de la aplicación.
+* Interferir con el correcto funcionamiento de los servidores, redes o servicios asociados a Truckly.
 
-```bash
-cd trucklyApp
-```
+## 5. Servicios de Ubicación y Permisos del Dispositivo
+Truckly requiere permisos de acceso a la ubicación GPS del dispositivo en tiempo real para posibilitar el rastreo de envíos, la asignación eficiente de rutas y la optimización de los servicios de transporte. El uso de estos datos se rige por nuestra Política de Privacidad.
 
-```bash
-npm install
-```
+## 6. Tarifas y Pagos
+Las tarifas aplicables por los servicios de transporte, comisiones o cargos de servicio se mostrarán dentro de la aplicación antes de confirmar cualquier transacción o servicio. El usuario acepta pagar la totalidad de los costos asociados a los servicios solicitados.
 
-```bash
-npm run dev
-```
+## 7. Propiedad Intelectual
+Todos los derechos de propiedad intelectual sobre el código, diseño gráfico, marcas, logotipos, interfaces, nombres comerciales y contenidos de **Truckly** pertenecen exclusivamente a sus creadores y desarrolladores. Queda prohibida la reproducción, distribución o modificación no autorizada de cualquiera de estos elementos.
 
-```bash
-npm run build
-```
+## 8. Limitación de Responsabilidad
+Truckly actúa principalmente como una plataforma tecnológica de conexión y gestión logística:
 
-```bash
-npm run preview
-```
+* No se garantiza la disponibilidad ininterrumpida o libre de errores del servicio técnico de la aplicación.
+* Truckly no se hace responsable por pérdidas, daños o retrasos en las mercancías transportadas que deriven de causas de fuerza mayor, negligencia de terceros o incumplimientos de las partes contratantes fuera del control de la plataforma.
 
-- `npm run dev` — servidor de desarrollo.
-- `npm run build` — genera `trucklyApp/dist/` con todo el contenido incrustado
-  (JS + CSS minificados, fuentes e iconos). Ese `dist/` es el que se usa para
-  crear el instalador.
-- `npm run preview` — sirve el `dist/` ya generado.
+## 9. Modificaciones a los Términos
+Nos reservamos el derecho de actualizar o modificar estos Términos y Condiciones en cualquier momento. Cualquier cambio significativo será notificado a través de la aplicación o publicando la versión actualizada en este mismo espacio.
 
-## Pantallas
+## 10. Contacto
+Si tiene dudas, preguntas o comentarios respecto a estos Términos y Condiciones, puede ponerse en contacto con el equipo de soporte de Truckly a través de los canales oficiales de soporte integrados en la aplicación o mediante nuestro repositorio oficial.
 
-| Ruta | Pantalla | Frame de Figma |
-| --- | --- | --- |
-| `/` | Dashboard del Dueño | `41:1576` (adaptado) |
-| `/flota` | Lista de Flota (Completa) | `79:263` |
-| `/flota/nuevo` | Registrar Camión | `41:2717` (adaptado) |
-| `/flota/:id` | Perfil del Camión | `41:1779` (adaptado, con edición) |
-| `/documentos` | Actualización de Documentos | `41:2407` (adaptado, agrupado por camión) |
-| `/perfil` | Perfil | básico, sin sesión ni autenticación |
+---
 
-## Paleta de marca
-
-| Token | Valor | Uso |
-| --- | --- | --- |
-| `--c-primary` | `#F98513` Habañero | CTA, estados activos, iconos clave |
-| `--c-secondary` | `#223382` Deep Space Royal | Navbars, marca, botones secundarios |
-| `--c-accent` | `#9BACD8` Aster Flower Blue | Bordes, hover, seleccionado, tags |
-| `--c-bg` | `#F4F1EC` Luster White | Fondo principal |
-| `--c-fill-muted` | `#DAD1C8` Jodhpur Tan | Divisores, tarjetas secundarias |
-| `--c-ink` | `#111144` Deadly Depths | Texto principal |
-| `--c-danger` | `#BA1A1A` | Documentos vencidos (semántico, fuera de marca) |
-
-## Datos y edición
-
-- Todo vive en `localStorage`. La app arranca con la flota vacía; "Borrar datos"
-  (en Perfil) elimina todos los camiones guardados en el dispositivo.
-- **Editar Datos** en el perfil del camión permite cambiar marca, modelo, año,
-  capacidad, tipo de carrocería y **estado** (dropdown) sin recargar.
-- **Registrar Camión** exige los 4 documentos legales con fecha de vencimiento
-  no anterior a hoy, y valida placa/marca/modelo (sin símbolos), año (1980 —
-  año actual + 1) y capacidad (0.1 — 80 toneladas) antes de guardar.
-- **Actualización de Documentos** agrupa por camión y marca en rojo las
-  tarjetas con al menos un documento vencido.
+*© 2026 Truckly App. Todos los derechos reservados.*
